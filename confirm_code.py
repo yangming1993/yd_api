@@ -9,9 +9,9 @@ from common import gen_req, gen_sign
 import requests
 import copy
 dit = {
+	"source":"1",
 	"version":"2.0",
 	"identity_id":"CMV10999723",
-	"source":"1",
 	"data":{
 		"virtualCodes":[
 			{
@@ -30,3 +30,4 @@ req = gen_req(sign, dit)
 print req
 ret = requests.post('http://222.35.5.7/vapi/service/setVirtualCode', data={'req':req})
 print ret.content
+dic

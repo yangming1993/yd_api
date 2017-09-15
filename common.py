@@ -10,7 +10,9 @@ import json
 import base64
 import hashlib
 
+#测试的
 secretKey = 'kjkhZ4TAxYFWXBMMhFevWFRc3uB5XXCvu4LfwTGc52iRx9Ta1eQCspPfb9Jzr2QVShjcXaLdcCOzEbUnx9zuPTWMdcWAdC1YhpNBtz51gs1n9i7rTxuVkgzUk59zK208'
+#示例的
 # secretKey = 'RMSMs44C4YRA25w27nRjN399VTUVVBY2eGy6E2v'
 identify_id = 'CMV10999725'
 
