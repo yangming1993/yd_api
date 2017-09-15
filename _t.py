@@ -42,10 +42,32 @@ dir = {
 "title":"测试"
 }
 }
-json_sort_dir = '"""""""""""""""""""""""""""""""""""""""""""""",,,,,,,,,,-...0000000000000000000000000011111111111112222333344555666677788::::::::::::CFIIMVVX_aaaacccdddddddeeeeeeeeeefhiiiiiiiiiillmnnnnnnoooooppqrrrrrssstttttttttuuuvyy{{}}测试'
-sign = common.gen_sign(dir)
-t1 = common.gen_req(sign,dir)
-print t1
 
-t = '汉'
-print t.encode('gbk'),chardet.detect(t)
+# context = {"source":"1",
+# "version":"2.0",
+# "identity_id":"CMV10999725","data":{"code": "0", "msg": "下单成功"}}
+# json_sort_dir = '"""""""""""""""""""""""""""""""""""""""""""""",,,,,,,,,,-...0000000000000000000000000011111111111112222333344555666677788::::::::::::CFIIMVVX_aaaacccdddddddeeeeeeeeeefhiiiiiiiiiillmnnnnnnoooooppqrrrrrssstttttttttuuuvyy{{}}测试'
+sign = common.gen_sign(dir)
+print sign
+# t1 = common.gen_req(sign,dir)
+# print t1
+
+
+# request = [15/Sep/2017 18:42:10] "POST /yd_app/notifyOrder?req=ZjRmZTlhMTVhNzExN2VjM2Y5YzkyMDkyNzM1OGNhNDB7InNvdXJjZSI6IjEiLCJ2ZXJzaW9uIjoiMi4wIiwiaWRlbnRpdHlfaWQiOiJDTVYxMDk5OTcyMyIsImRhdGEiOnsidGl0bGUiOiLmtYvor5XllYblk4EiLCJwaG9uZSI6IjE4NzEwMDcwNDg0IiwicHJpY2UiOiIxMC4wIiwiY2hhbm5lbFN1Yk9yZGVySWQiOiIyMDE3MDkxNTE4NDUyNjEyMDQzMSIsImNoYW5uZWxPcmRlcklkIjoiMjAxNzA5MTUxODQ1MjYxMjA0NzUiLCJmaW5hbEZlZSI6IjkuOCIsInF1YW50aXR5IjoiMSIsIml0ZW1JZCI6IlgxNzAxMTkwMDA0MTYzOC0wMSIsIm9yZGVySWQiOiJWMTcwOTE1MTg0NTI2NTQiLCJkaXNjb3VudCI6IiJ9fQ== HTTP/1.1" 200 36
+# req = 'ZjRmZTlhMTVhNzExN2VjM2Y5YzkyMDkyNzM1OGNhNDB7InNvdXJjZSI6IjEiLCJ2ZXJzaW9uIjoiMi4wIiwiaWRlbnRpdHlfaWQiOiJDTVYxMDk5OTcyMyIsImRhdGEiOnsidGl0bGUiOiLmtYvor5XllYblk4EiLCJwaG9uZSI6IjE4NzEwMDcwNDg0IiwicHJpY2UiOiIxMC4wIiwiY2hhbm5lbFN1Yk9yZGVySWQiOiIyMDE3MDkxNTE4NDUyNjEyMDQzMSIsImNoYW5uZWxPcmRlcklkIjoiMjAxNzA5MTUxODQ1MjYxMjA0NzUiLCJmaW5hbEZlZSI6IjkuOCIsInF1YW50aXR5IjoiMSIsIml0ZW1JZCI6IlgxNzAxMTkwMDA0MTYzOC0wMSIsIm9yZGVySWQiOiJWMTcwOTE1MTg0NTI2NTQiLCJkaXNjb3VudCI6IiJ9fQ=='
+# req_b = 'f4fe9a15a7117ec3f9c920927358ca40{"source":"1","version":"2.0","identity_id":"CMV10999723","data":{"title":"测试商品","phone":"18710070484","price":"10.0","channelSubOrderId":"20170915184526120431","channelOrderId":"20170915184526120475","finalFee":"9.8","quantity":"1","itemId":"X17011900041638-01","orderId":"V17091518452654","discount":""}}'
+# req_dic1 = {"source":"1","version":"2.0","identity_id":"CMV10999725",
+# 		   "data":{"title":"测试商品","phone":"18710070484","price":"10.0",
+# 				   "channelSubOrderId":"20170915162841536932",
+# 				   "channelOrderId":"20170915162841536340","finalFee":"9.8",
+# 				   "quantity":"1",
+# 				   "itemId":"X17011900041638-01",
+# 				   "orderId":"V17091516284189","discount":""}}
+# req_dic2 = {"source":"1","version":"2.0","identity_id":"CMV10999723",
+# 			"data":{"title":"测试商品","phone":"18710070484","price":"10.0",
+# 					"channelSubOrderId":"20170915184526120431",
+# 					"channelOrderId":"20170915184526120475","finalFee":"9.8",
+# 					"quantity":"1",
+# 					"itemId":"X17011900041638-01","orderId":"V17091518452654","discount":""}}'
+# print common.req_to_dir(req)
+
