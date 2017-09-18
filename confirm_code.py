@@ -7,8 +7,8 @@
 '''
 from common import gen_req, gen_sign
 import requests
-import copy
-dit = {
+
+dic = {
 	"source":"1",
 	"version":"2.0",
 	"identity_id":"CMV10999723",
@@ -24,10 +24,38 @@ dit = {
 	}
 }
 
-sign = gen_sign(dit)
+dic2 = {
+	"version":"2.0",
+	"identity_id":"CMV12345678",
+	"source":"1",
+	"data":{
+		"virtualCodes":[
+			{
+				"vcodePass":"CMV12345678_XXXXXXXX",
+				"vcode":"CMV12345678_XXXXXXXX"
+			}
+		],
+		"itemId":"X16110300000000-01",
+		"orderId":"V16110114687522"
+	}
+}
 
-req = gen_req(sign, dit)
-print req
-ret = requests.post('http://222.35.5.7/vapi/service/setVirtualCode', data={'req':req})
-print ret.content
-dic
+dic3 = {
+	"version":"2.0",
+	"identity_id":"CMV10999723",
+	"source":"1",
+	"data":
+	{
+		"orderId":"V17091518452654",
+		"memo":"不买了",
+		"userPhone":"18710070484"
+	}
+}
+
+
+sign = gen_sign(dic3)
+
+req = gen_req(sign, dic3)
+print(req)
+ret = requests.post('http://222.35.5.7/vapi/service/cancelOrder', data={'req':req})
+print(ret.content.decode())

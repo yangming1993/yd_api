@@ -25,7 +25,6 @@ import sys
 #
 # d =  {"a":"2"}
 # print type(json.dumps(d))
-import chardet
 dir = {
 "source":"1",
 "version":"2.0",
@@ -48,7 +47,7 @@ dir = {
 # "identity_id":"CMV10999725","data":{"code": "0", "msg": "下单成功"}}
 # json_sort_dir = '"""""""""""""""""""""""""""""""""""""""""""""",,,,,,,,,,-...0000000000000000000000000011111111111112222333344555666677788::::::::::::CFIIMVVX_aaaacccdddddddeeeeeeeeeefhiiiiiiiiiillmnnnnnnoooooppqrrrrrssstttttttttuuuvyy{{}}测试'
 sign = common.gen_sign(dir)
-print sign
+print(sign)
 # t1 = common.gen_req(sign,dir)
 # print t1
 
@@ -71,3 +70,8 @@ print sign
 # 					"itemId":"X17011900041638-01","orderId":"V17091518452654","discount":""}}'
 # print common.req_to_dir(req)
 
+
+i = common.req_to_dir('req=MDkxNDkxZDQzNjZiMDRlNjBmMWQwMDU1ZDAyMDBkOTZ7InNvdXJjZSI6IjEiLCJ2ZXJzaW9uIjoiMi4wIiwiaWRlbnRpdHlfaWQiOiJDTVYxMDk5OTcyMyIsImRhdGEiOnsib3JkZXJJZCI6IlYxNzA5MTUxODQ1MjY1NCJ9fQ==')
+print(repr(i))
+
+print(common.gen_vcode())

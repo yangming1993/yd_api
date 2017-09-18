@@ -7,9 +7,12 @@
 '''
 
 from django.conf.urls import url
-import views
+from yd_app import views
 
 urlpatterns = [
 	url(r'^$', views.index),
 	url(r'^notifyOrder$', views.notifyOrder),
+	url(r'^resendVirtualCode$', views.resendVirtualCode),
+	url(r'^setCodeInvalid$', views.setCodeInvalid),
+
 ]
