@@ -12,13 +12,28 @@ import hashlib
 import uuid
 
 #测试的
-secretKey = 'kjkhZ4TAxYFWXBMMhFevWFRc3uB5XXCvu4LfwTGc52iRx9Ta1eQCspPfb9Jzr2QVShjcXaLdcCOzEbUnx9zuPTWMdcWAdC1YhpNBtz51gs1n9i7rTxuVkgzUk59zK208'
+# secretKey = 'kjkhZ4TAxYFWXBMMhFevWFRc3uB5XXCvu4LfwTGc52iRx9Ta1eQCspPfb9Jzr2QVShjcXaLdcCOzEbUnx9zuPTWMdcWAdC1YhpNBtz51gs1n9i7rTxuVkgzUk59zK208'
+secretKey = 'VXpf5FNmowZaijWyvJcBELnzoucqlshE2RWweH3FdPs46i1QhZ9HerQccPoT2qsSMSMNiVqfkj4tzYeEq8OxvTYmy7y0SPqP0qzgW7xICOk6SJEGfQrZnmeJY4PQg3jL'
 #示例的
 # secretKey = 'RMSMs44C4YRA25w27nRjN399VTUVVBY2eGy6E2v'
 identity_id = 'CMV10999723'
 
 
 def gen_sign(dic):
+	"""
+	生成签名
+	:param dir: 传入所有信息字典
+	:return: 签名
+	"""
+	json_dir = json.dumps(dic, ensure_ascii=False)
+	json_sort_dir = sorted(json_dir)
+
+	json_sort_dir = ''.join(json_sort_dir)
+	sign = hashlib.md5(bytes((secretKey + json_sort_dir),encoding='utf-8')).hexdigest().lower()
+
+	return sign
+
+def gen_sign2(dic):
 	"""
 	生成签名
 	:param dir: 传入所有信息字典
@@ -55,7 +70,7 @@ def req_to_dir(req):
 	sign, a, json_dic = st.partition('{')
 	json_dic = a + json_dic
 	dic = json.loads(json_dic)  #loads后为unicode格式
-	cf_sign = gen_sign(dic)
+	cf_sign = gen_sign2(dic)
 	if sign == cf_sign:
 		return dic
 	return False

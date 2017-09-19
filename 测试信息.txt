@@ -1,0 +1,15 @@
+
+                                               测试账户创建，注册商户：yd_test2；
+商户号：CMV10999723；
+单一发码商品ID：X17011900041638-01；
+单一直充商品ID：X17011900041639-01；
+同时存在发码和直充2种处理方式的商品ID：X17011900041640-01；(非此类商户不用配置此字段)
+注册手机号：18710070484；
+注册网址：http://n18426f663.iask.in:10856/yd_app/；
+秘钥：kjkhZ4TAxYFWXBMMhFevWFRc3uB5XXCvu4LfwTGc52iRx9Ta1eQCspPfb9Jzr2QVShjcXaLdcCOzEbUnx9zuPTWMdcWAdC1YhpNBtz51gs1n9i7rTxuVkgzUk59zK208   
+
+
+申请成功，请查收以下信息：
+
+商户编号： CMV10999708
+key： VXpf5FNmowZaijWyvJcBELnzoucqlshE2RWweH3FdPs46i1QhZ9HerQccPoT2qsSMSMNiVqfkj4tzYeEq8OxvTYmy7y0SPqP0qzgW7xICOk6SJEGfQrZnmeJY4PQg3jL                                                                                                                                                                                

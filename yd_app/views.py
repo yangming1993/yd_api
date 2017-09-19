@@ -13,6 +13,7 @@ def index(request):
 
 @csrf_exempt
 def notifyOrder(request):
+	# print(request.META['QUERY_STRING'])
 	dic = req_to_dir(request.META['QUERY_STRING'])['data']
 	print(dic)
 	if Order.objects.filter(orderId=dic['orderId']):
